@@ -1,6 +1,6 @@
 a=[]
 m=0
-s=" "
+s="dvdf"
 for i in range(len(s)):
               
               if s[i] not in a:
