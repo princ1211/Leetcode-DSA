@@ -1,0 +1,21 @@
+temp=head
+        temp1=head
+        
+        while temp1 and temp1.next:
+            temp=temp.next
+            temp1=temp1.next.next
+        return temp
+
+#delete middle node
+ temp=head
+        prev=None
+        temp1=head
+        if (head is None or
+            head.next is None):
+            return
+        while temp1 and temp1.next:
+            prev=temp
+            temp=temp.next
+            temp1=temp1.next.next
+        prev.next=temp.next
+        return head
