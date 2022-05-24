@@ -1,0 +1,25 @@
+ def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+    
+        def build(st, end ):
+            nonlocal index
+            if st>end:
+                return None
+            valu=preorder[index]
+            node=TreeNode(valu)
+            index+=1
+        
+            
+        
+            node.left=build( st, index2[valu]-1 )
+            node.right= build( index2[valu]+1, end)
+            return node
+        index = 0
+
+        
+        index2= {}
+        for ind, value in enumerate(inorder):
+            index2[value] = ind
+
+        return build(0, len(preorder) - 1)
+    
+        
