@@ -1,0 +1,23 @@
+s='codecode'
+target="codes"
+
+c=0
+res=999999
+s1 = []
+for i in range(len(target)):
+  s1.append(target[i])
+s1 = list(set(s1))  
+for i in range(len(target)):
+  if target[i] not in s:
+      print(0)
+      break
+  elif (len(s1) == 1):
+      res=target.count(target[i])/s.count(target[i])
+      break
+                
+  else:
+      c=s.count(target[i])                              
+      res=min(res,s.count(target[i])/target.count(target[i]))
+
+print(int(res)) 
+        
